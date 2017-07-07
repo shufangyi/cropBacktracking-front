@@ -1,3 +1,9 @@
+a {
+    display: inline-block;
+    color: #444;
+    text-decoration: none;
+}
+
 .navbar {
     height: 60px;
 }
@@ -41,6 +47,7 @@
 .body-content {
     padding-top: 60px;
 }
+
 
 /**
 页脚部分
