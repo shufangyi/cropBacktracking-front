@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>二维码</title>
+
+    <link rel="stylesheet" href="css/frame.css">
+
+
+
+</head>
+
+<body>
+    <iframe src="topFrame1.html" class="topFrame" name="topFrame" height="50px" width="100%" frameborder="0"></iframe>
+    <iframe id="sidebar" src="sidebar.html" class="leftFrame1" name="leftFrame1" frameborder="0"></iframe>
+    <iframe src="two-bar-text.html" scrolling="yes" class="myframe1"  frameborder="0"></iframe>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+    <script>
+        $(function () {
+            window.setInterval(function () {
+                var clientWidth = $(window).width();
+                var clientHeight = $(window).height();
+                // alert(clientHeight+" | "+clientWidth);
+                $('.myframe1').css('height', clientHeight - 50 + 'px');
+                $('.myframe1').css('width', clientWidth - 200 + 'px');
+            }, 50);
+        });
+    </script>
+</body>
+
+
+
+
+</html>
