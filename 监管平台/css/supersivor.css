@@ -37,9 +37,12 @@ body{
 /*search*/
 
 .title{
-    margin-top: 60px;
     height: 200px;
     border: black 1px solid;
+
+    /*position: fixed;*/
+    width: 100%;
+    margin-top: 52px;
 }
 .search{
     line-height: 100px;
@@ -56,7 +59,6 @@ body{
     background-color:rgb(0,216,221) ;
 }
 .search span{
-    /*height: 24px;*/
     font-size: 19px;
     color: white;
 }
@@ -64,7 +66,8 @@ body{
 
 /*container*/
 .container{
-    margin-top: 30px;
+    /*background-color: red;*/
+    margin-top: 52px;
 }
 .container a{
     text-decoration: none;
@@ -97,12 +100,23 @@ body{
     width: 30%;
     height: 70%;
     border-radius: 7px;
-
     overflow: hidden;
 }
 .com-card .com-pic img{
     width: 100%;
     height: 100%;
+}
+.com-card .com-pic img:hover{
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -ms-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
 }
 .com-card .com-p{
     display: block;
@@ -117,7 +131,7 @@ body{
     font-size: 14px;
     text-decoration: none;
     margin-right: 2%;
-    margin-top: -6%;
+    margin-top: -5%;
     float: right;
 }
 .com-icon .com-url{
@@ -160,5 +174,19 @@ body{
 #goTop:active{
     background: #666;
 
+}
+
+
+/**
+两端往中间移动
+ */
+.left{
+    position: relative;
+    left: -2000px;
+}
+
+.right{
+    position: relative;
+    right: -2000px;
 }
 

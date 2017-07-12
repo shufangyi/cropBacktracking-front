@@ -23,14 +23,15 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">
-                <img alt="cropbacktracking" src="../平台模板/img/logo.png" />
+                <img alt="cropbacktracking" src="../平台模板/img/logo.png"/>
                 <span class="navbar-brand-name">cropbacktracking</span>
             </a>&nbsp;
         </div>
@@ -43,8 +44,10 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="btn-group" role="group" aria-label="...">
-                    <button type="button" id="login-name" class="btn btn-info">didilu&nbsp;<span class="glyphicon glyphicon-user"></span></button>
-                    <button type="button" class="btn btn-danger">SignOut&nbsp;<span class="glyphicon glyphicon-log-out"></span> </button>
+                    <button type="button" id="login-name" class="btn btn-info">didilu&nbsp;<span
+                            class="glyphicon glyphicon-user"></span></button>
+                    <button type="button" class="btn btn-danger">SignOut&nbsp;<span
+                            class="glyphicon glyphicon-log-out"></span></button>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -62,101 +65,85 @@
 <!--内容-->
 <div class="container">
 
+    <div class="company">
+        <!--js动态加载-->
+    </div>
 
 
-    <div class="row">
-        <div class='col-md-6'>
-            <a href='#' class='cominfo'>
-                <div class='comlist'>
-                    <h2 class='com-name'>有哪些清奇的脑回路</h2>
-                    <div class='com-card'>
-                        <div class='com-content clear'>
-                            <div class='com-pic'>
-                                <img src='img/1.png'/>
-                            </div>
 
-                            <p class='com-p'>！不如这次我就个性一点，扩展点内容吧！说不定这节课同学们都会活跃哦！</p>
-                        </div>
-                        <div class='com-icon clear'>
-                            <a href='#' class='com-url'><span>&nbsp;企业官网&nbsp;</span></a>
-                            <span class='com-phone'>&nbsp;<span class='glyphicon glyphicon-earphone'></span>&nbsp;1234567890&nbsp;</span>
-                            <span class='com-email'>&nbsp;<span class='glyphicon glyphicon-envelope'></span>&nbsp;123456@136.com&nbsp;</span>
-                        </div>
-                    </div>
-                </div>
-            </a>
+
+    <!--侧边栏小按钮-->
+    <div class="sorted">
+        <button class="btn btn-default" id="goTop">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </button>
+    </div>
+
+    <footer id="footer">
+        <!-- 页脚 -->
+        <div class="footer-content">
+            <ul class="share-group">
+                <li><a href="http://weibo.com/u/2661020885?refer_flag=1001030201_"><i class="fa fa-weibo"></i></a></li>
+                <li><a href="#"><i class="fa fa-wechat"></i></a></li>
+                <li><a href="#"><i class="fa fa-qq"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+            </ul>
+            <div class="copy">
+                &copy SuperTeam&nbsp;&nbsp; - &nbsp;&nbsp;2099&nbsp;&nbsp;苏ICP备17028767号
+            </div>
         </div>
+    </footer>
+    <script src="js/footer.js"></script>
 
-        <script>
-            $(document).ready(function () {
-                for (var i =0;i<6;i++){
-                    var output="";
-                    output+="<div class='col-md-6'>"+
-                            "<a href='#' class='cominfo'>"+
-                            "<div class='comlist'>"+
-                            "<h2 class='com-name'>有哪些清奇的脑回路</h2>"+
-                            "<div class='com-card'>"+
-                            "<div class='com-content clear'>"+
-                            "<div class='com-pic'>"+
-                            "<img src='img/1.png'/>"+
-                            "</div>"+
-                            "<p class='com-p'>！不如这次我就个性一点，扩展点内容吧！说不定这节课同学们都会活跃哦！</p>"+
-                            "</div>"+
-                            "<div class='com-icon clear'>"+
-                            "<a href='#' class='com-url'><span>&nbsp;企业官网&nbsp;</span></a>&nbsp;"+
-                            "<span class='com-phone'>&nbsp;<span class='glyphicon glyphicon-earphone'></span>&nbsp;1234567890&nbsp;</span>&nbsp;"+
-                            "<span class='com-email'>&nbsp;<span class='glyphicon glyphicon-envelope'></span>&nbsp;123456@136.com&nbsp;</span>"+
-                            "</div>"+
-                            "</div>"+
-                            "</div>"+
-                            "</a>"+
-                            "</div>";
-                    $(".row").append(output);
+    <script>
+        $(document).ready(function () {
+//            alert("1");
+
+            var output = "";
+            for (var i = 0; i < 5; i++) {
+
+                if (i % 2 === 0) {
+                    output += "<div class='row'><div class='col-md-6 left'>";
                 }
+                else {
+                    output += "<div class='col-md-6 right'>";
+                }
+                output +=
+                    "<a href='#' class='cominfo'>" +
+                    "<div class='comlist'>" +
+                    "<h2 class='com-name'>有哪些清奇的脑回路</h2>" +
+                    "<div class='com-card'>" +
+                    "<div class='com-content clear'>" +
+                    "<div class='com-pic'>" +
+                    "<img src='img/1.png'/>" +
+                    "</div>" +
+                    "<p class='com-p'>！不如这次我就个性一点，扩展点内容吧！说不定这节课同学们都会活跃哦！</p>" +
+                    "</div>" +
+                    "<div class='com-icon clear'>" +
+                    "<a href='#' class='com-url'><span>&nbsp;企业官网&nbsp;</span></a>&nbsp;" +
+                    "<span class='com-phone'>&nbsp;<span class='glyphicon glyphicon-earphone'></span>&nbsp;1234567890&nbsp;</span>&nbsp;" +
+                    "<span class='com-email'>&nbsp;<span class='glyphicon glyphicon-envelope'></span>&nbsp;123456@136.com&nbsp;</span>" +
+                    "</div>" +
+                    "</div>" +
+                    "</div>" +
+                    "</a>" +
+                    "</div>";
+                if (i % 2 === 1) {
+                    output += "</div>";
+                }
+            }
+            $(".company").append(output);
+        });
+        $(function () {
+            $(window).load(".compamy",null,function () {
+                $('.col-md-6').css('transition', '0.4s');
+                $('.left').css('left', 0);
+                $('.right').css('right', 0);
             });
-        </script>
-
-    </div>
-
-<!--侧边栏小按钮-->
-<div class="sorted">
-    <button class="btn btn-default" id="goTop">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-    </button>
-</div>
-
-<footer id="footer">
-    <!-- 页脚 -->
-    <div class="footer-content">
-        <ul class="share-group">
-            <li><a href="http://weibo.com/u/2661020885?refer_flag=1001030201_"><i class="fa fa-weibo"></i></a></li>
-            <li><a href="#"><i class="fa fa-wechat"></i></a></li>
-            <li><a href="#"><i class="fa fa-qq"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-        </ul>
-        <div class="copy">
-            &copy SuperTeam&nbsp;&nbsp; - &nbsp;&nbsp;2099&nbsp;&nbsp;苏ICP备17028767号
-        </div>
-    </div>
-</footer>
-<script src="js/footer.js"></script>
-
-<script>
-    $(function () {
-        var pic = $(".com-pic img");
-        pic.mouseover(function () {
-           $(this).animate({
-               "width":"120%"
-           },200);
         });
-        pic.mouseout(function () {
-            $(this).animate({
-                "width":"100%"
-            },200);
-        });
-    });
-</script>
+
+    </script>
 
 </body>
 </html>
