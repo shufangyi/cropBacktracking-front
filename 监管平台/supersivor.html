@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -17,66 +18,75 @@
 
 
 </head>
+
 <body>
-<!--顶部导航栏-->
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <!--顶部导航栏-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#">
                 <img alt="cropbacktracking" src="../平台模板/img/logo.png"/>
                 <span class="navbar-brand-name">cropbacktracking</span>
             </a>&nbsp;
-        </div>
+            </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
-            </ul>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+                </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li class="btn-group" role="group" aria-label="...">
-                    <button type="button" id="login-name" class="btn btn-info">didilu&nbsp;<span
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="btn-group" role="group" aria-label="...">
+                        <button type="button" id="login-name" class="btn btn-info">didilu&nbsp;<span
                             class="glyphicon glyphicon-user"></span></button>
-                    <button type="button" class="btn btn-danger">SignOut&nbsp;<span
+                        <button type="button" class="btn btn-danger">SignOut&nbsp;<span
                             class="glyphicon glyphicon-log-out"></span></button>
-                </li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-<div class="title">
-    <center><h1>农产品溯源监管平台</h1></center>
+    <div class="title">
+        <center>
+            <h1>农产品溯源监管平台</h1>
+        </center>
 
-    <form class="search">
-        <input type="text" class="search-input" placeholder="search">
-        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-    </form>
-</div>
-<!--内容-->
-<div class="container">
-
-    <div class="company">
-        <!--js动态加载-->
+        <form class="search">
+            <input type="text" class="search-input" placeholder="search">
+            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+        </form>
     </div>
 
+    <iframe id="bg" src="http://www.jq22.com/demo/jQuery-yezi-141217210850" scrolling="no" frameborder="0" width="100%" style="position: absolute;
+    top: 50px;z-index :-1;"></iframe>
+    <!--内容-->
+    <div class="container">
+
+        <div class="company">
+            <!--js动态加载-->
+        </div>
 
 
 
-    <!--侧边栏小按钮-->
-    <div class="sorted">
-        <button class="btn btn-default" id="goTop">
+
+        <!--侧边栏小按钮-->
+        <div class="sorted">
+            <button class="btn btn-default" id="goTop">
             <span class="glyphicon glyphicon-chevron-up"></span>
         </button>
+        </div>
     </div>
 
     <footer id="footer">
@@ -98,15 +108,20 @@
 
     <script>
         $(document).ready(function () {
-//            alert("1");
+
+            window.setInterval(function () {
+                var clientWidth = $(window).width();
+                var clientHeight = document.body.clientHeight;
+                $('#bg').css('height', clientHeight + 'px');
+                $('#bg').css('width', clientWidth + 'px');
+            }, 50);
 
             var output = "";
             for (var i = 0; i < 5; i++) {
 
                 if (i % 2 === 0) {
                     output += "<div class='row'><div class='col-md-6 left'>";
-                }
-                else {
+                } else {
                     output += "<div class='col-md-6 right'>";
                 }
                 output +=
@@ -136,15 +151,13 @@
             $(".company").append(output);
         });
         $(function () {
-            $(window).load(".compamy",null,function () {
+            $(window).load(".compamy", null, function () {
                 $('.col-md-6').css('transition', '0.4s');
                 $('.left').css('left', 0);
                 $('.right').css('right', 0);
             });
         });
-
-
     </script>
-</div>
 </body>
+
 </html>
