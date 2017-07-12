@@ -5,6 +5,7 @@
 }
 
 a,
+a:focus,
 li {
     text-decoration: none;
 }
@@ -18,18 +19,23 @@ body {
     list-style: none;
 }
 
-#tabs>ul{
+#tabs>ul {
+    width: 100%;
     background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-#tabs>ul span{
+#tabs>ul span {
     display: inline-block;
     background: #fff;
     margin-right: 10px;
     /*border-bottom: 2px solid #444;*/
 }
+
 #tabs>ul span:hover,
-#tabs>ul span.active{
+#tabs>ul span.active {
     background: #ddd;
     /*border: 2px solid #444;    */
     /*border-bottom: 2px solid white;    */
@@ -60,6 +66,7 @@ body {
     /*background: #ddd;*/
 }
 
+
 /*#tabs>ul span li a.active,
 #tabs>ul span li a:hover {
     background: #fff;
@@ -69,6 +76,11 @@ body {
     text-decoration: none;
 }
 
+#tabs_container {
+    margin-top: 50px;
+}
+
 #tabs_container>div {
     display: none;
+    padding: 20px;
 }

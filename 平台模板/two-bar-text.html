@@ -53,7 +53,7 @@
             var addTab = function (tabName, $form) {
 
                 //标签html语句
-                var $atab = $("<span class='tab'><li><a href='#" + tabName + "'>" + tabName +
+                var $atab = $("<span class='tab'><li><a href='#" + tabName + "'onclick='return false;'>" + tabName +
                     "</a><li class='fa fa-close'></li></li></span>");
 
                 //追加进网页中
@@ -94,6 +94,7 @@
             as.bind('click', function (e) {
                 e.stopPropagation();
                 e.preventDefault();
+                var src = $(this).attr('href');
                 var tabName = $(this).text();
                 tabName = tabName.toLowerCase().trim().replace(/\s/g, "_");
                 if (document.getElementById(tabName)) {
@@ -101,7 +102,7 @@
                 } else {
                     var $form = $("<div id=" + tabName + ">" +
                         //tabName
-                        "<iframe src='deliverRecord.html' scrolling='no' class='formContent'  frameborder='0'></iframe>"
+                        "<iframe src='"+src+"' scrolling='no' class='formContent'  frameborder='0'></iframe>"
 
                         +
                         "</div>")
@@ -121,7 +122,8 @@
 
                 // alert(clientHeight+" | "+clientWidth);
                 $('.formContent').css('height', clientHeight + 40 + 'px');
-                $('.formContent').css('width', clientWidth + 'px');
+                $('.formContent').css('width', '100%');
+                // $('.formContent').css('width', clientWidth + 'px');
             }, 50);
 
 
