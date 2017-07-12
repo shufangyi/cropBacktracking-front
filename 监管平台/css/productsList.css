@@ -9,7 +9,7 @@ ul, li {
 #waterfall li {
     overflow: hidden;
     float: left;
-    width: 224px;
+    width: 380px;
     /*margin: 0 5px;*/
     background: white;
     border-radius: 7px;
@@ -35,7 +35,7 @@ ul, li {
     display: block;
     /*max-width: 224px;*/
     height: auto;
-    width: 224px;
+    width: 380px;
 }
 
 #waterfall li .p-hot{
