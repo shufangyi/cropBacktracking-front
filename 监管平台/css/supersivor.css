@@ -1,6 +1,7 @@
 
 body{
     background-color: #f8f8f8;
+    height: 3000px;
 }
 /*topFrame*/
 /*登录*/
@@ -164,18 +165,13 @@ body{
 
 
 /*侧边栏小按钮*/
-#goTop{
+.sorted{
     position: fixed;
     right: 20px;
     bottom: 30px;
-    border: 1px solid #888;
     background: rgba(255, 255, 255, 0.7);
 }
 
-#goTop:active{
-    background: #666;
-
-}
 
 
 /**
