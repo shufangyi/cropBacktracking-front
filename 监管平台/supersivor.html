@@ -46,7 +46,7 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="btn-group" role="group" aria-label="...">
-                        <button type="button" id="login-name" class="btn btn-info">didilu&nbsp;<span
+                        <button type="button" id="loginBtn" class="btn btn-info">didilu&nbsp;<span
                             class="glyphicon glyphicon-user"></span></button>
                         <button type="button" class="btn btn-danger">SignOut&nbsp;<span
                             class="glyphicon glyphicon-log-out"></span></button>
@@ -104,6 +104,13 @@
             </div>
         </div>
     </footer>
+    <div id="changeInfo">
+        <p>修改信息</p>
+        <form class="form-group">
+            
+        </form>
+    </div>
+    <div id="mask"></div>
     <script src="js/footer.js"></script>
 
     <script>
@@ -115,6 +122,20 @@
                 $('#bg').css('height', clientHeight + 'px');
                 $('#bg').css('width', clientWidth + 'px');
             }, 50);
+
+            $('#loginBtn').bind('click', function () {
+                var clientWidth = $(window).width();
+                var baifenbi = ((clientWidth - 400) / 2) / clientWidth * 100;
+                $('#changeInfo').css('left', baifenbi + '%');
+                $('#changeInfo').css('transition', 'left 0.8s');
+                $("#mask").css('display', 'block');
+            });
+
+            $("#mask").bind('click', function () {
+                $('#changeInfo').css('left', '-100%');
+                $('#changeInfo').css('transition', 'left 0.8s');
+                $("#mask").css('display', 'none');
+            });
 
             var output = "";
             for (var i = 0; i < 5; i++) {
