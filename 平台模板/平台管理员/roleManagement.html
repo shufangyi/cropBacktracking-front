@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>角色管理</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../Form/css/Form.css">
+
+
+</head>
+<body>
+
+<form class="form-horizontal" >
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>新添角色</legend>
+
+        <!-- Text input-->
+        <div class="control-group">
+            <label class="control-label" for="name">角色名称</label>
+            <div class="controls">
+                <input id="name" name="name" type="text" placeholder="角色名称" class="input-xlarge" required="">
+                <p class="help-block">1</p>
+            </div>
+        </div>
+
+        <!-- Multiple Checkboxes (inline) -->
+        <div class="control-group">
+            <label class="control-label">选择权限</label>
+            <div class="controls perssion">
+                <label class="checkbox inline" for="permissions-0">
+                    <input type="checkbox" name="permissions" id="permissions-0" value="播种" required="required">
+                    播种
+                </label>
+                <label class="checkbox inline" for="permissions-1">
+                    <input type="checkbox" name="permissions" id="permissions-1" value="施肥" required="required">
+                    施肥
+                </label>
+                <label class="checkbox inline" for="permissions-2">
+                    <input type="checkbox" name="permissions" id="permissions-2" value="病虫害" required="required">
+                    病虫害
+                </label>
+                <label class="checkbox inline" for="permissions-3">
+                    <input type="checkbox" name="permissions" id="permissions-3" value="采摘" required="required">
+                    采摘
+                </label>
+                <label class="checkbox inline" for="permissions-4">
+                    <input type="checkbox" name="permissions" id="permissions-4" value="检验入库" required="required">
+                    检验入库
+                </label>
+                <label class="checkbox inline" for="permissions-5">
+                    <input type="checkbox" name="permissions" id="permissions-5" value="加工包装" required="required">
+                    加工包装
+                </label>
+                <label class="checkbox inline" for="permissions-6">
+                    <input type="checkbox" name="permissions" id="permissions-6" value="物流管理" required="required">
+                    物流管理
+                </label>
+                <label class="checkbox inline" for="permissions-7">
+                    <input type="checkbox" name="permissions" id="permissions-7" value="分销管理" required="required">
+                    分销管理
+                </label>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
+<script>
+    $(function () {
+        var permission_list = ["播种","施肥","病虫害","采摘","检验入库","检验入库","物流管理","分销管理"];
+        for(var i=0;i<permission_list.length;i++){
+            var output="";
+            output+="<label class='checkbox inline' for='permissions-"+i+"'>"+
+                    "<input type='checkbox' name='permissions' id='permissions-"+i+"' value='"+permission_list[i]+"' required='required'>"+
+                    permission_list[i]+
+                    "</label>";
+            $(".controls")
+        }
+    })
+</script>
+
+</body>
+</html>
