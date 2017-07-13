@@ -25,9 +25,9 @@
 
         <!-- Text input-->
         <div class="control-group">
-            <label class="control-label" for="name">角色名称</label>
+            <label class="control-label" for="permissionName">角色名称</label>
             <div class="controls">
-                <input id="name" name="name" type="text" placeholder="角色名称" required="">
+                <input id="permissionName" name="permissionName" class="name" type="text" placeholder="角色名称" required="">
                 <p class="help-block">1</p>
             </div>
         </div>
@@ -35,7 +35,7 @@
         <!-- Multiple Checkboxes (inline) -->
         <div class="control-group">
             <label class="control-label">选择权限</label>
-            <div class="controls permissions">
+            <div class="controls jscheckbox" id="permissions">
                 <!--js动态添加-->
 
             </div>
@@ -52,9 +52,11 @@
                 </script>
             </div>
 
+        </div>
         <div class="control-group">
             <button type="submit" id="submit" name="submit" class="btn btn-info">提交</button>
         </div>
+
 
     </fieldset>
 </form>
@@ -62,14 +64,14 @@
 
 <script>
     $(function () {
-        var permission_list = ["播种","施肥","病虫害","采摘","检验入库","加工包装","物流管理","分销管理","播种","施肥","病虫害","采摘","检验入库","加工包装","物流管理","分销管理","播种","施肥","病虫害","采摘","检验入库","加工包装","物流管理","分销管理"];
+        var permission_list = ["商品管理","计划管理","人员管理","播种流程的信息查看","播种流程的信息操作","施肥流程的信息查看","施肥流程的信息操作","病虫害防治的信息查看","病虫害防治的信息操作","采摘流程的信息查看","采摘流程的信息操作","检验入库流程的信息查看","检验入库流程的信息操作","加工包装流程的信息查看","加工包装流程的信息操作","物流管理流程的信息查看","物流管理流程的信息操作","分销管理流程的信息查看","分销管理流程的信息操作"];
         for(var i=0;i<permission_list.length;i++){
             var output="";
             output+="<label class='checkbox inline' for='permissions-"+i+"'>"+
                     "<input type='checkbox' name='permissions' id='permissions-"+i+"' value='"+permission_list[i]+"'>"+
                     permission_list[i]+
                     "</label>";
-            $(".permissions").append(output);
+            $("#permissions").append(output);
         }
     });
 </script>
