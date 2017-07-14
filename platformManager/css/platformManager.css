@@ -8,13 +8,13 @@
 
 }
 /*角色名称*/
-.control-group .name{
+.control-group .input-xlarge{
     position: absolute;
     left: 120px;
     width: 200px;
 
     display: inline-block;
-    margin-top: -24px;
+    margin-top: 4px;
 }
 
 .help-block{
@@ -29,12 +29,12 @@
     flex-wrap: wrap;
 }
 
-.checkbox{
+.checkbox,.radio{
     /*margin-left: 30px;*/
     padding-left: 150px;
     width: 320px;
 }
-.checkbox .inline{
+.checkbox,.radio .inline{
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;

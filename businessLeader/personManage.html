@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>企业管理</title>
+    <title>人员管理</title>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -24,8 +24,8 @@
         });
     </script>
 
+    <link rel="stylesheet" href="../platformManager/css/platformManager.css">
 
-    <link rel="stylesheet" href="css/platformManager.css">
 
 </head>
 <body>
@@ -35,62 +35,22 @@
     <fieldset>
 
         <!-- Form Name -->
-        <legend>新增企业</legend>
+        <legend>新增用户</legend>
 
         <!-- Text input-->
         <div class="control-group" >
             <div class="controls" >
-                <label class="control-label" for="businessName">企业名称</label>
-                <input id="businessName" name="businessName" type="text" placeholder="" class="input-xlarge" required="required">
+                <label class="control-label" for="business_ID">企业编码</label>
+                <input id="business_ID" name="business_ID" type="text" placeholder="" class="input-xlarge" required="required">
                 <span class="help-block">1</span>
             </div>
-        </div>
 
-        <div class="control-group" >
-            <div class="controls" >
-                <label class="control-label" for="businessID">企业编码</label>
-                <input id="businessID" name="businessID" type="number" placeholder="" class="input-xlarge" required="required">
-                <span class="help-block">1</span>
-            </div>
-        </div>
-
-        <div class="control-group" >
-            <div class="controls" >
-                <label class="control-label" for="businessAddr">企业地址</label>
-                <input id="businessAddr" name="businessAddr" type="text" placeholder="" class="input-xlarge" required="required">
-                <span class="help-block">1</span>
-            </div>
-        </div>
-
-        <div class="control-group" >
-            <div class="controls" >
-                <label class="control-label" for="businessMobile">电话</label>
-                <input id="businessMobile" name="businessMobile" type="text" placeholder="" class="input-xlarge" required="required">
-                <span class="help-block">1</span>
-            </div>
-        </div>
-
-        <div class="control-group" >
-            <div class="controls" >
-                <label class="control-label" for="businessEmail">邮箱</label>
-
-                <input id="businessEmail" name="businessEmail" type="text" placeholder="example@exa.com" class="input-xlarge" required="required">
-                <span class="help-block">1</span>
-            </div>
-        </div>
-
-        <div class="control-group" >
-            <div class="controls" >
-                <label class="control-label" for="businessUrl">企业网址</label>
-                <input id="businessUrl" name="businessUrl" type="text" placeholder="http://www.example.com" class="input-xlarge" required="required">
-                <span class="help-block">1</span>
-            </div>
         </div>
 
         <!-- Text input-->
         <div class="control-group" >
             <div class="controls" >
-                <label class="control-label" for="ManagerName">企业负责人姓名</label>
+                <label class="control-label" for="ManagerName">姓名</label>
                 <input id="ManagerName" name="ManagerName" type="text" class="input-xlarge" required="required">
                 <span class="help-block">1</span>
             </div>
@@ -131,6 +91,14 @@
             </div>
         </div>
 
+        <!-- Multiple Checkboxes (inline) -->
+        <div class="control-group">
+            <label class="control-label">角色</label>
+            <div class="controls jscheckbox" id="role">
+                <!--js动态添加-->
+
+            </div>
+        </div>
 
 
         <!-- Textarea -->
@@ -155,6 +123,20 @@
     </fieldset>
 </form>
 </div>
-
 </body>
+
+<script>
+    $(function () {
+        var role_list = ["企业负责人","种植员","检验员","加工包装员","物流负责人","分销商"];
+        for(var i=0;i<role_list.length;i++){
+            var output="";
+            output+="<label class='radio inline' for='role-"+i+"'>"+
+                "<input type='radio' name='role' id='role-"+i+"' value='"+role_list[i]+"'>"+
+                role_list[i]+
+                "</label>";
+            $("#role").append(output);
+        }
+    });
+</script>
+
 </html>
