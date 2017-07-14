@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <div class="control-group" >
+            <div class="control-group plan" >
                 <div class="controls" >
                     <label class="control-label" for="planTemplate">选择计划模板</label>
                     <select id="planTemplate" name="planTemplate"  class="input-xlarge" required="required">
@@ -73,6 +73,50 @@
             </div>
 
             <!--js动态加载-->
+            <script>
+                $(function () {
+                    var template_list = ["系统默认模板","模板1","模板2"];
+                    var output = "";
+                    for(var i=0;i<template_list.length;i++){
+                        output+="<option>"+
+                            template_list[i]+
+                            "</option>";
+                    }
+                    $("#planTemplate").append(output);
+
+
+                    var role_output="";
+                    for (var j=0;j<3;j++){
+                        role_output+=
+                            "<div class='controls' >"+
+                            "<label class='control-label' for='sow'>种植员</label>"+
+                            "<select id='sow' name='sow'  class='input-xlarge' required='required'>"+
+                            "<option>王二</option>"+
+                            "<option>王二2</option>"+
+                            "</select></div>"
+                    }
+                    $(".plan").append(role_output);
+                });
+            </script>
+
+
+            <!-- Textarea -->
+            <div class="control-group">
+                <div class="controls">
+                    <label class="control-label" for="Comment">备注</label>
+                    <div id="Comment"><p>Hello Summernote</p></div>
+                    <script>
+                        $(document).ready(function() {
+                            $('#Comment').summernote();
+                        });
+                    </script>
+                </div>
+
+            </div>
+
+            <div class="control-group">
+                <button type="submit" id="submit" name="submit" class="btn btn-info">提交</button>
+            </div>
 
         </fieldset>
     </form>
@@ -80,30 +124,6 @@
 </body>
 
 
-<script>
-    $(function () {
-        var template_list = ["系统默认模板","模板1","模板2"];
-        var output = "";
-        for(var i=0;i<template_list.length;i++){
-            output+="<option>"+
-                template_list[i]+
-                "</option>";
-        }
-        $("#planTemplate").append(output);
 
-
-        var role_output="";
-        for (var j=0;j<3;j++){
-            role_output+="<div class='control-group' >"+
-                    "<div class='controls' >"+
-                    "<label class='control-label' for='sow'>种植员</label>"+
-                    "<select id='sow' name='sow'  class='input-xlarge' required='required'>"+
-                    "<option>王二</option>"+
-                    "<option>王二2</option>"+
-                    "</select></div></div>"
-        }
-        $("fieldset").append(role_output);
-    });
-</script>
 
 </html>
