@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <title>企业负责人</title>
+    <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/frame.css">
 
@@ -14,7 +16,7 @@
 <body>
     <iframe src="topFrame.html" class="topFrame" name="topFrame" height="50px" width="100%" frameborder="0"></iframe>
     <iframe id="sidebar" src="sidebar.html" class="leftFrame1" name="leftFrame1" frameborder="0"></iframe>
-    <iframe src="mainbodyForm.html" scrolling="yes" class="myframe1"  frameborder="0"></iframe>
+    <iframe src="mainbodyForm.html" scrolling="yes" class="myframe1" frameborder="0"></iframe>
     <div id="changeInfo">
         <form class="form-horizontal">
             <fieldset>
@@ -54,7 +56,7 @@
                         <button type="reset" id="doublebutton-0" name="doublebutton-0" class="btn  btn-success"> 重 置 </button>
                         <button type="submit" id="doublebutton2-0" name="doublebutton2-0" class="btn btn-danger"> 确 认 </button>
                     </div>
-                </div>      
+                </div>
 
             </fieldset>
         </form>
@@ -71,26 +73,6 @@
                 $('.myframe1').css('height', clientHeight - 50 + 'px');
                 $('.myframe1').css('width', clientWidth - 200 + 'px');
             }, 50);
-
-
-            var as = $(window.frames["topFrame"].document).find('div.navbar-header');
-            
-            alert(as.attr('class'));
-
-            as.bind('click', function () {
-                var clientWidth = $(window).width();
-                var baifenbi = ((clientWidth - 400) / 2) / clientWidth * 100;
-                $('#changeInfo').css('left', baifenbi + '%');
-                $('#changeInfo').css('transition', 'left 0.8s');
-                $("#mask").css('display', 'block');
-            });
-
-            $("#mask").bind('click', function () {
-                $('#changeInfo').css('left', '-100%');
-                $('#changeInfo').css('transition', 'left 0.8s');
-                $("#mask").css('display', 'none');
-            });
-
         });
     </script>
 </body>
