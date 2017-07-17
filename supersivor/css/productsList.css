@@ -34,6 +34,7 @@ ul, li {
 #waterfall li img {
     display: block;
     /*max-width: 224px;*/
+    max-width: 380px;
     height: auto;
     width: 380px;
 }
