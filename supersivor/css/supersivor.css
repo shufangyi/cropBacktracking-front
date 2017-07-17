@@ -183,21 +183,6 @@ body{
 
 
 /**
-两端往中间移动
- */
-.left{
-    position: relative;
-    left: -2000px;
-}
-
-.right{
-    position: relative;
-    right: -2000px;
-}
-
-
-
-/**
 修改密码
 */
 
