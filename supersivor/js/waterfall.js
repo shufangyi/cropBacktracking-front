@@ -43,7 +43,7 @@ window.onload = function () {
       create_a.innerHTML = '<img src='+data[i].picture+' alt="#">';
       create_a.className = 'bounceIn animated';
       create_a.href = data[i].target;
-      // create_a.style.height = data[i].height + 'px';
+      create_a.style.height = data[i].height + 'px';
       create_title.innerHTML = data[i].title;
       create_description.innerHTML = data[i].description;
       create_hot.innerHTML = '&nbsp;<span class="glyphicon glyphicon-eye-open"></span>&nbsp;'+data[i].hot+'&nbsp;';
@@ -148,7 +148,7 @@ window.onload = function () {
     var item_w = aList[0].offsetWidth;
     var result = Math.floor(body_w / item_w);
 
-    return result >= 5 ? 5 : result;
+    return result >= 3 ? 3 : result;
   };
 
   function prepareImage(imageUrl, callBack) {
