@@ -99,7 +99,7 @@ footer ul.share-group {
 }
 
 body {
-    font-family: 'Microsoft YaHei';
+
     font-size: 14px;
     color: #25292f;
     line-height: 1.8em;
@@ -130,19 +130,13 @@ h4,
 h5,
 h6 {
     position: relative;
-    font-family: 'Microsoft YaHei';
+   
     font-weight: normal;
     margin: 0px;
     background: none;
     line-height: 1.4em;
 }
 
-input,
-button,
-select,
-textarea {
-    font-family: 'Microsoft YaHei';
-}
 
 p {
     position: relative;
@@ -187,7 +181,7 @@ li {
     -webkit-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-    font-family: 'Microsoft YaHei';
+   
 }
 
 .centered {
@@ -240,7 +234,7 @@ li {
     line-height: 24px;
     padding: 11px 25px;
     font-size: 13px;
-    font-family: 'Microsoft YaHei';
+ 
     letter-spacing: 1px;
     font-weight: 400;
     text-transform: uppercase;
@@ -261,7 +255,7 @@ li {
     display: inline-block;
     line-height: 24px;
     padding: 10px 25px;
-    font-family: 'Microsoft YaHei';
+  
     letter-spacing: 1px;
     font-size: 12px;
     font-weight: 400;
@@ -699,7 +693,7 @@ li {
 .main-header .top-bar .info-box li a {
     position: relative;
     color: #ffffff;
-    font-family: 'Microsoft YaHei';
+
     font-weight: 400;
     letter-spacing: 1px;
     font-size: 12px;
@@ -791,7 +785,7 @@ li {
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 700;
-    font-family: 'Microsoft YaHei';
+ 
     background: #61a93e;
     letter-spacing: 1px;
 }
@@ -831,7 +825,7 @@ li {
     font-size: 12px;
     color: #444444;
     line-height: 24px;
-    font-family: 'Microsoft YaHei';
+
     text-transform: uppercase;
     font-weight: 700;
     opacity: 1;
@@ -847,7 +841,7 @@ li {
 }
 
 .main-menu .navigation>li.dropdown>a:before {
-    font-family: 'Microsoft YaHei';
+
     content: "\f0d7";
     position: absolute;
     right: 0px;
@@ -904,7 +898,7 @@ li {
     position: relative;
     display: block;
     padding: 8px 15px;
-    font-family: 'Microsoft YaHei';
+ 
     line-height: 20px;
     font-weight: 600;
     font-size: 12px;
@@ -924,7 +918,7 @@ li {
 }
 
 .main-menu .navigation>li>ul>li.dropdown>a:after {
-    font-family: 'Microsoft YaHei';
+
     content: "\f0da";
     position: absolute;
     right: 10px;
@@ -1045,7 +1039,7 @@ li {
     margin-top: 20px;
     padding-left: 50px;
     line-height: 24px;
-    font-family: 'Microsoft YaHei';
+  
 }
 
 .header-style-two .header-top .social-box {
@@ -1212,7 +1206,7 @@ li {
     color: #212121;
     font-weight: 700;
     text-transform: uppercase;
-    font-family: 'Microsoft YaHei';
+  
 }
 
 .header-style-two .lower-part .outer-box .btn-box a:hover {
@@ -1261,7 +1255,7 @@ li {
 }
 
 .text-white-5 {
-    font-family: 'Microsoft YaHei';
+ 
     color: #61a93e;
     text-transform: none;
     text-shadow: 1px 1px #000;
@@ -1287,7 +1281,7 @@ li {
 }
 
 .text-black {
-    font-family: 'Microsoft YaHei';
+  
     color: #ffffff;
     font-size: 90px;
     font-weight: 700;
@@ -1437,7 +1431,7 @@ li {
 }
 
 .featured-item-2 .title h4 {
-    font-family: 'Microsoft YaHei';
+  
     font-weight: 600;
     font-size: 22px;
     margin-bottom: 10px;
@@ -1465,7 +1459,7 @@ li {
 .jv-st-desc {
     padding-right: 20px;
     padding-left: 20px;
-    font-family: 'Microsoft YaHei';
+  
     font-weight: 400;
     font-size: 14px;
 }
@@ -1485,7 +1479,7 @@ li {
     font-size: 72px;
     color: #61a93e;
     line-height: 1.4em;
-    font-family: 'Microsoft YaHei';
+
 }
 
 .main-features .title-box h2 {
@@ -1629,7 +1623,7 @@ li {
 }
 
 .sec-title .bigger-text {
-    font-family: 'Microsoft YaHei';
+   
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -1708,7 +1702,7 @@ li {
 .featured-fluid-section .dark-column h2 {
     font-size: 36px;
     margin-bottom: 20px;
-    font-family: 'Microsoft YaHei';
+
     font-weight: 700;
     color: #ffffff;
     text-transform: uppercase;
@@ -1719,7 +1713,7 @@ li {
 .featured-fluid-section .dark-column .title-text {
     position: relative;
     color: #ffffff;
-    font-family: 'Microsoft YaHei';
+
     text-transform: capitalize;
     font-size: 24px;
     font-weight: 600;
@@ -1852,14 +1846,14 @@ li {
 }
 
 .default-featured-column.style-two h3 {
-    font-family: 'Microsoft YaHei';
+   
     font-size: 24px;
     font-weight: 600;
     text-transform: capitalize;
 }
 
 .default-featured-column h3 a {
-    font-family: 'Microsoft YaHei';
+ 
     font-size: 24px;
     font-weight: 600;
     text-transform: capitalize;
