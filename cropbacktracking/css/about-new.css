@@ -1,3 +1,6 @@
+body{
+    background: url("../assets/img/backgrounds/register-bg2.jpg");
+}
 a {
     display: inline-block;
     color: #444;
@@ -85,7 +88,7 @@ section{
     color: #f69581;
 }
 
-.wi-container li img:hover{
+.trancircle{
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
