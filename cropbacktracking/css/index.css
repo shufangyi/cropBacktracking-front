@@ -63,15 +63,15 @@ a:hover {
     min-height: 300px;
     padding-top: 60px;
     padding-bottom: 40px;
-    /*background-image: url("../assets/background-left.png"), url("../assets/background-right.png");
+    background-image: url("../assets/background-left.png"), url("../assets/background-right.png");
     background-repeat: no-repeat, no-repeat;
     background-position: top left, top right;
-    background-size: auto 300px, auto 300px; */
-    background-image: url("../assets/background.jpg");
+    background-size: auto 300px, auto 300px; 
+    /* background-image: url("../assets/background.jpg");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 960px auto;
-    background-attachment: fixed;
+    background-attachment: fixed; */
 }
 
 
@@ -152,7 +152,7 @@ a:hover {
 }
 
 #fengexian {
-    /*width: 970px;*/
+    width: 970px;
     margin: 10px auto 30px;
 }
 
