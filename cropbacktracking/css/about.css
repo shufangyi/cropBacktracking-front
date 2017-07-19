@@ -1,6 +1,11 @@
-body{
+body {
     background: url("../assets/img/backgrounds/register-bg2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    height: 750px;
 }
+
 a {
     display: inline-block;
     color: #444;
@@ -50,78 +55,84 @@ a {
 
 
 /*简介*/
-section{
+
+section {
     padding-top: 70px;
 }
 
-.wi-container li{
+.wi-container li {
     border-radius: 7px;
     border: 2px solid #ececec;
     box-shadow: 2px 2px 2px rgba(236, 236, 236, 0.25);
     text-align: center;
-
 }
 
-.wi-container li h2{
+.wi-container li h2 {
     font-weight: 400;
     color: grey;
 }
 
-.wi-container li img{
+.wi-container li img {
     width: 360px;
-    box-shadow:0 0  4px rgba(175, 175, 175, 0.61);
+    box-shadow: 0 0 4px rgba(175, 175, 175, 0.61);
 }
 
-.fa-phone{
+.fa-phone {
     border: solid 1px #50cf8e;
     border-radius: 3px;
     color: #50cf8e;
 }
-.fa-qq{
+
+.fa-qq {
     border: solid 1px #febb50;
     border-radius: 3px;
     color: #febb50;
 }
-.fa-weibo{
+
+.fa-weibo {
     border: solid 1px #f69581;
     border-radius: 3px;
     color: #f69581;
 }
 
-.trancircle{
+.trancircle {
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -ms-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
-
-    transform:rotate(360deg);
-    -ms-transform:rotate(360deg); 	/* IE 9 */
-    -moz-transform:rotate(360deg); 	/* Firefox */
-    -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
-    -o-transform:rotate(360deg); 	/* Opera */
-
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    /* IE 9 */
+    -moz-transform: rotate(360deg);
+    /* Firefox */
+    -webkit-transform: rotate(360deg);
+    /* Safari 和 Chrome */
+    -o-transform: rotate(360deg);
+    /* Opera */
     border-radius: 250px;
-
 }
 
 
 /*prev  next */
-.navpn{
+
+.navpn {
     position: absolute;
     top: 300px;
 }
-#nav-prev{
-    padding-left: 175px;
 
+#nav-prev {
+    padding-left: 175px;
 }
-#nav-next{
+
+#nav-next {
     padding-left: 530px;
 }
 
-span i{
+span i {
     color: rgba(200, 200, 200, 0.6);
 }
-span i:hover{
-    color: rgb(100,100,100);
+
+span i:hover {
+    color: rgb(100, 100, 100);
 }

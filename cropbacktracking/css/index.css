@@ -66,7 +66,7 @@ a:hover {
     background-image: url("../assets/background-left.png"), url("../assets/background-right.png");
     background-repeat: no-repeat, no-repeat;
     background-position: top left, top right;
-    background-size: auto 300px, auto 300px; 
+    background-size: auto 300px, auto 300px;
     /* background-image: url("../assets/background.jpg");
     background-repeat: no-repeat;
     background-position: top center;
@@ -167,7 +167,13 @@ a:hover {
     border: 2px solid white;
 }
 
-.body-content .in1 {
+.body-content .introduction {
+    box-shadow: 0 1px 30px rgba(7, 76, 213, 0.07);
+    border-radius: 10px;
+}
+
+
+/* .body-content .in1 {
     background-color: rgba(96, 203, 233, 0.6);
 }
 
@@ -181,7 +187,7 @@ a:hover {
 
 .body-content .in4 {
     background-color: rgba(192, 82, 159, 0.6);
-}
+} */
 
 .body-content .introduction:hover {
     transition: 2s;
