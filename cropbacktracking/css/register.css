@@ -17,7 +17,9 @@ a:hover {
 }
 
 #mainbody {
-    background: url('../assets/img/backgrounds/register-bg2.jpg')
+     background: url('../assets/img/backgrounds/register-bg2.jpg'); 
+    /* background: url('../assets/img/been.jpg') no-repeat fixed; */
+    background-size: 100% 100%;
 }
 
 .navbar {
