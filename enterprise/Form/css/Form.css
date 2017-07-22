@@ -29,3 +29,15 @@
     position: absolute;
     left: 380px;
 }
+
+.high{
+    color: red;
+    position: absolute;
+    left: 140px;
+}
+.onError{
+    color: red;
+}
+.onSuccess{
+    color: #00b000;
+}

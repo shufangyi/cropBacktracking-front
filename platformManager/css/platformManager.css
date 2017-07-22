@@ -42,3 +42,15 @@
     padding-top: 7px;
 }
 
+.high{
+    color: red;
+    position: absolute;
+    left: 110px;
+}
+.onError{
+    color: red;
+}
+.onSuccess{
+    color: #00b000;
+}
+

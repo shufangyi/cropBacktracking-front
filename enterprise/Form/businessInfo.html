@@ -16,9 +16,50 @@
     <!--jquery-ui-->
     <link href="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="../css/platformManager.css">
+    <link rel="stylesheet" href="../../platformManager/css/platformManager.css">
 
 </head>
+
+<script>
+    $(function() {
+        $("form :input.required").each(function(){
+            var $required = $("<strong class='high'> *</strong>"); //创建元素
+            $(this).parent().append($required); //然后将它追加到文档中
+        });
+
+        $('form :input').blur(function () {
+            var $parent = $(this).parent();
+            $parent.find(".help-block").remove();
+            if($(this).is("#businessEmail")){
+                if(this.value=="" || (this.value!="" && !/.+@.+\.[a-zA-Z]{2,4}$/.test(this.value)) ){
+                    var errorMsg='请输入正确的邮箱';
+                    $parent.append("<span class='help-block onError'>"+errorMsg+"</span>");
+                }else {
+                    var okMsg = '输入正确';
+                    $parent.append("<span class='help-block onSuccess'>"+okMsg+"</span>");
+                }
+            }
+            if($(this).is("#businessMobile")){
+                if(this.value=="" || (this.value!="" && !/^1[34578]\d{9}$/.test(this.value))){
+                    errorMsg='请输入正确的电话号码';
+                    $parent.append("<span class='help-block onError'>"+errorMsg+"</span>");
+                }else {
+                    okMsg='输入正确';
+                    $parent.append("<span class='help-block onSuccess'>"+okMsg+"</span>");
+                }
+            }
+            if($(this).is("#businessUrl")){
+                if(this.value=="" || (this.value!="" && !/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/.test(this.value))){
+                    errorMsg='请输入正确的网址';
+                    $parent.append("<span class='help-block onError'>"+errorMsg+"</span>");
+                }else {
+                    okMsg='输入正确';
+                    $parent.append("<span class='help-block onSuccess'>"+okMsg+"</span>");
+                }
+            }
+        });
+    } );
+</script>
 
 <body>
     <div class="container">
@@ -32,7 +73,7 @@
                 <div class="control-group">
                     <div class="controls">
                         <label class="control-label" for="businessName">企业名称</label> <input id="businessName" name="businessName"
-                            placeholder="企业名称" class="input-xlarge" type="text">
+                            placeholder="企业名称" class="input-xlarge required" type="text">
 
                     </div>
                 </div>
@@ -41,7 +82,7 @@
                 <div class="control-group">
                     <div class="controls">
                         <label class="control-label" for="businessAddr">企业地址</label> <input id="businessAddr" name="businessAddr"
-                            placeholder="企业地址" class="input-xlarge" type="text">
+                            placeholder="企业地址" class="input-xlarge required" type="text">
                     </div>
                 </div>
 
@@ -49,7 +90,7 @@
                 <div class="control-group">
                     <div class="controls">
                         <label class="control-label" for="businessUrl">企业官网</label> <input id="businessUrl" name="businessUrl"
-                            placeholder="企业官网" class="input-xlarge" type="text">
+                            placeholder="企业官网" class="input-xlarge required" type="text">
                     </div>
                 </div>
 
@@ -57,7 +98,7 @@
                 <div class="control-group">
                     <div class="controls">
                         <label class="control-label" for="businessEmail">企业邮箱</label> <input id="businessEmail" name="businessEmail"
-                            placeholder="企业邮箱" class="input-xlarge" type="text">
+                            placeholder="企业邮箱" class="input-xlarge required" type="text">
                     </div>
                 </div>
 
@@ -65,14 +106,14 @@
                 <div class="control-group">
                     <div class="controls">
                         <label class="control-label" for="businessMobile">联系电话</label> <input id="businessMobile" name="businessMobile"
-                            placeholder="联系电话" class="input-xlarge" type="text">
+                            placeholder="联系电话" class="input-xlarge required" type="text">
                     </div>
                 </div>
 
                 <div class="control-group">
                     <div class="controls">
                         <label class="control-label" for="businessLog">企业图标</label> <input id="businessLog" name="businessLog"
-                            class="input-xlarge" type="file">
+                            class="input-xlarge required" type="file">
                     </div>
                 </div>
                 <div class="control-group">
@@ -97,6 +138,9 @@
 
                 </div>
 
+                <div class="control-group">
+                    <button type="button" id="submit" name="submit" class="btn btn-info">提交</button>
+                </div>
             </fieldset>
         </form>
 
