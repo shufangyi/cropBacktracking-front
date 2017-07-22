@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>计划管理</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!--富文本编辑器-->
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
+    <!--jquery-ui-->
+    <link href="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jqueryui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="../css/platformManager.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <form class="form-horizontal">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>企业信息</legend>
+
+                <!-- Text input-->
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="control-label" for="businessName">企业名称</label> <input id="businessName" name="businessName"
+                            placeholder="企业名称" class="input-xlarge" type="text">
+
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="control-label" for="businessAddr">企业地址</label> <input id="businessAddr" name="businessAddr"
+                            placeholder="企业地址" class="input-xlarge" type="text">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="control-label" for="businessUrl">企业官网</label> <input id="businessUrl" name="businessUrl"
+                            placeholder="企业官网" class="input-xlarge" type="text">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="control-label" for="businessEmail">企业邮箱</label> <input id="businessEmail" name="businessEmail"
+                            placeholder="企业邮箱" class="input-xlarge" type="text">
+                    </div>
+                </div>
+
+                <!-- Text input-->
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="control-label" for="businessMobile">联系电话</label> <input id="businessMobile" name="businessMobile"
+                            placeholder="联系电话" class="input-xlarge" type="text">
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="control-label" for="businessLog">企业图标</label> <input id="businessLog" name="businessLog"
+                            class="input-xlarge" type="file">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls" style="padding-left:80px;">
+                        <img id="logoShow" src="../../assets/logo.png" alt="logoShow" style="max-width:120px;" />
+                    </div>
+                </div>
+
+                <!-- Textarea -->
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="control-label" for="Comment">备注</label>
+                        <div id="Comment">
+                            <p>Hello Summernote</p>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('#Comment').summernote();
+                            });
+                        </script>
+                    </div>
+
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+    <script>
+        $(function () {
+            var businessId = $(window.parent.parent.frames["topFrame"].document).find('#businessId').text();
+            $.ajax({
+                url: "../getBusinessInfo.do",
+                type: "POST",
+                data: {
+                    "businessId": businessId
+                },
+                success: function (data) {
+                    
+                }
+            })
+        });
+    </script>
+</body>
+
+</html>
