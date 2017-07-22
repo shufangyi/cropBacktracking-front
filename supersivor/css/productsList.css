@@ -3,8 +3,8 @@
 }
 .product-card{
     width: 100%;
-    max-width: 365px;
-    min-width: 185px;
+    max-width: 260px;
+    min-width: 150px;
 
     border: 1px solid rgba(190, 190, 190, 0.6);
     box-shadow: 0 0 5px rgba(146, 146, 146, 0.27);
@@ -15,7 +15,7 @@
     text-align: center;
     margin-top: 3%;
     position: relative;
-    height:265px;
+    height:215px;
 
 }
 .product-card h2{
@@ -32,12 +32,12 @@
     -o-transition: top 0.6s;
     transition: top 0.6s;
     position: absolute;
-    top:200px;
+    top:150px;
     background: rgba(255,255,255,0.8);
 }
 
 .shangyi{
-    top:80px;
+    top:60px;
 }
 
 

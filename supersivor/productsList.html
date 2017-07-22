@@ -101,10 +101,12 @@
         var output = "";
         for (var i = 0; i < 10; i++) {
 
-            if (i % 3 === 0) {
-                output += "<div class='row'><div class='col-md-4 left animated fadeInLeft'>";
-            } else {
-                output += "<div class='col-md-4 right animated fadeInRight'>";
+            if (i % 4 === 0) {
+                output += "<div class='row'><div class='col-md-3 left animated fadeInLeft'>";
+            } else if(i%4===1) {
+                output += "<div class='col-md-3 left animated fadeInLeft'>";
+            }else {
+                output += "<div class='col-md-3 right animated fadeInRight'>";
             }
 
             output+="<a href='product.html'>"+
@@ -117,7 +119,7 @@
                     "<span class='p-time'>&nbsp;<span class='glyphicon glyphicon glyphicon-time'></span>&nbsp;2017-07-12&nbsp;</span>"+
                     "</div></div></a></div>";
 
-            if (i % 3 === 2) {
+            if (i % 4 === 3) {
                 output += "</div>";
             }
         }
